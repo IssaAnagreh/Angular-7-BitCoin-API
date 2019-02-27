@@ -1,0 +1,10 @@
+<h6 style='text-align: center'> *any article without a pic will be grey </h6>
+<div *ngFor="let item of news; index as i">
+  <div [style.background-color]="item.urlToImage ? white : color" class="header">
+    <img [src]=item.urlToImage />
+    <h1>{{i}}: {{item.title}}</h1>
+    <h4>{{item.content}}</h4>
+    <span>{{item.description}}</span>
+    <p>Author: {{item.author}}, Published At: {{item.publishedAt}}</p>
+  </div>
+</div>
